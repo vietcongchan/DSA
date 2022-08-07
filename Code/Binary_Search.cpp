@@ -5,13 +5,13 @@ using namespace std;
 
 bool search_binary(int a[], int left, int right, int k, int &res) {
     int mid = (left + right) / 2;
-    if (left == right) return false;
+    if (left > right) return false;
     if (a[mid] == k) {
         res = mid;
         return true;
     } else {
-        if (a[mid] < k) left = mid;
-        if (a[mid] > k) right = mid;
+        if (a[mid] < k) left = mid + 1;
+        if (a[mid] > k) right = mid - 1;
         return search_binary(a, left, right, k, res);
     }
 }
