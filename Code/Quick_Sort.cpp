@@ -2,12 +2,12 @@
 using namespace std;
 
 void quicksort(int a[], int left, int right) {
-    int element_mid = arr[(left + right) / 2];
+    int pivot = arr[(left + right) / 2];
     int i = left, j = right;
 
     while (i < j) {
-        while (arr[i] < element_mid) i = i + 1;
-        while (arr[j] > element_mid) j = j - 1;
+        while (arr[i] < pivot) i = i + 1;
+        while (arr[j] > pivot) j = j - 1;
         if (i <= j) {
             swap(arr[i], arr[j]);
             i = i + 1;
