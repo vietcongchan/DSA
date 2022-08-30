@@ -20,8 +20,8 @@ void merge_(int arr[], int left, int mid, int right) {
     int L[n1];
     int R[n2];
     //khoi tao 2 mang trai phai
-    for (int i = 0; i <= n1; i++) L[i] = arr[i + left];
-    for (int i = 0; i <= n2; i++) R[i] = arr[i + mid + 1];
+    for (int i = 0; i < n1; i++) L[i] = arr[i + left];
+    for (int i = 0; i < n2; i++) R[i] = arr[i + mid + 1];
     //swap
     int i = 0;
     int j = 0;
